@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Papo de Amor | Sabrina Tibursky</title>
+  
+  <!-- Fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Ficheiro CSS único na raiz -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= MENU DE NAVEGAÇÃO FIXO NO TOPO ================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="imagens/logo.png" alt="Sabrina Tibursky Logo" class="logo-img">
+      </a>
+
+      <!-- Botão Menu Hambúrguer (aparece apenas no telemóvel) -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Links de Navegação -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre mim</a></li>
+          <li><a href="psicoterapia.html">Psicoterapia</a></li>
+          <li><a href="index.html#depoimentos">Depoimentos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="https://www.instagram.com/sabrinatibursky.psi/" target="_blank" rel="noopener" class="insta-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://wa.me/5511982233209?text=Oi%C3%AA,%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." target="_blank" rel="noopener" class="btn-nav">Fale comigo</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= FAIXA DE TOPO DO BLOG ("PAPO DE AMOR") ================= -->
+  <section class="blog-hero-banner">
+    <div class="container blog-hero-container">
+      <div class="blog-title-white-box">
+        <h1>Papo de amor</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LISTA DE POSTS DO BLOG (GRELHA 2x2 - 4 POR PÁGINA) ================= -->
+  <main class="blog-page-main">
+    <div class="container blog-page-container">
+      
+      <div class="blog-page-grid" id="blog-posts-grid">
+        
+        <!-- Post 1 (Página 1) -->
+        <article class="blog-page-card" id="post-1" data-page="1">
+		<a href="blog/nem-toda-voz-critica-dentro-de-voce-e-sua-e-se-for-so-eco-de-quem-te-moldou.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-1.png" alt="Nem toda voz crítica dentro de você é sua">
+          </div>
+          <h2 class="blog-page-card-title">
+            Nem toda voz crítica dentro de você é sua. E se for só eco de quem te moldou?
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Você cresceu ouvindo que era demais. Sensível demais, intensa demais... Mas e se essas críticas nunca tivessem sido realmente suas? Na terapia, a gente aprende a separar o que é verdade da crítica que é legado emocional. Porque o que foi aprendido, também pode ser desaprendido.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>3 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 2 (Página 1) -->
+        <article class="blog-page-card" id="post-2" data-page="1">
+				<a href="blog/quando-tudo-ta-bem-mas-voce-ainda-sente-que-vai-perder.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-2.png" alt="Quando tudo tá bem... mas você ainda sente que vai perder">
+          </div>
+          <h2 class="blog-page-card-title">
+            Quando tudo tá bem... mas você ainda sente que vai perder.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Mesmo com amor presente, sua mente vive no modo alerta? Você acha que vai perder tudo? Isso não é frescura, é proteção. E você não precisa viver à beira do abandono o tempo todo. Amor bom também exige cura.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>4 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 3 (Página 1) -->
+        <article class="blog-page-card" id="post-3" data-page="1">
+				<a href="blog/querer-ser-escolhida-e-humano-se-abandonar-por-isso-nao.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-3.png" alt="Querer ser escolhida é humano. Se abandonar por isso, não.">
+          </div>
+          <h2 class="blog-page-card-title">
+            Querer ser escolhida é humano. Se abandonar por isso, não.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            O desejo de ser amada é legítimo. Mas quando você continua tentando até abandonar quem você realmente é, se perde tentando agradar, se adapta até desaparecer, não é. Amor de verdade começa quando você se escolhe primeiro.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 4 (Página 1) -->
+        <article class="blog-page-card" id="post-4" data-page="1">
+				<a href="blog/voce-nao-e-dificil-voce-so-parou-de-aceitar-migalhas.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-4.png" alt="Você não é difícil. Você só parou de aceitar migalhas.">
+          </div>
+          <h2 class="blog-page-card-title">
+            Você não é difícil. Você só parou de aceitar migalhas.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            "Intensa demais", "difícil", "complicada", talvez você só tenha cansado de se contentar com pouco. Isso não é defeito, é maturidade emocional. Sua sensibilidade é alerta, não exagero. Você não é uma pessoa difícil, você é uma pessoa decidida.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+        
+        <!-- Post 5 (Página 2) -->
+        <article class="blog-page-card" id="post-5" data-page="2">
+				<a href="blog/nao-e-amor-e-sobrevivencia-emocional.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-5.jpg" alt="Não é amor. É sobrevivência emocional.">
+          </div>
+          <h2 class="blog-page-card-title">
+            Não é amor. É sobrevivência emocional.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Aceitar o que dói não é amor. É medo. É história. É sobrevivência. E existe vida além disso. Muitas mulheres aprendem a normalizar abusos emocionais. A aceitar o que machuca em nome do amor. Não por fraqueza, mas por medo. Aceitar o que fere não é amor.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 6 (Página 2) -->
+        <article class="blog-page-card" id="post-6" data-page="2">
+				<a href="blog/voce-ama-a-pessoa-ou-ama-o-potencial-que-ela-poderia-ser.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-6.jpg" alt="Você ama a pessoa... ou ama o potencial que ela poderia ser?">
+          </div>
+          <h2 class="blog-page-card-title">
+            Você ama a pessoa... ou ama o potencial que ela poderia ser?
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Amar alguém pelo que ela poderia ser é viver de projeção. Relações reais se constroem com quem a pessoa é agora, não com promessas. Não se deve amar a ideia que se tem de alguém
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+        
+        <!-- Post 7 (Página 2) -->
+        <article class="blog-page-card" id="post-7" data-page="2">
+				<a href="blog/demonstrar-afeto-nao-e-fraqueza-e-coragem-emocional.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-7.jpg" alt="Demonstrar afeto não é fraqueza. É coragem emocional.">
+          </div>
+          <h2 class="blog-page-card-title">
+            Demonstrar afeto não é fraqueza. É coragem emocional.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            A gente aprendeu a esconder o que sente. A não demonstrar pra não parecer "emocionada demais". Mas sentir é potência. E demonstrar é maturidade, não carência. Se expressar é sinal de coragem e não fraqueza.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 8 (Página 2) -->
+        <article class="blog-page-card" id="post-8" data-page="2">
+				<a href="blog/nem-tudo-que-chamaram-de-amor-foi-amor.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-8.jpg" alt="Nem tudo que chamaram de amor... foi amor.">
+          </div>
+          <h2 class="blog-page-card-title">
+            Nem tudo que chamaram de amor... foi amor.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Controle, ausência, silêncio — muitas vezes vieram disfarçados de afeto. Mas o que fere não é amor. Amor de verdade é presença, crescimento, respeito. E você merece viver isso.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>    
+
+        <!-- Post 9 (Página 3) -->
+        <article class="blog-page-card" id="post-9" data-page="3">
+				<a href="blog/voce-nao-precisa-estar-cem-porcento-pra-merecer-amor.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-9.jpg" alt="Você não precisa estar 100% para merecer amor.">
+          </div>
+          <h2 class="blog-page-card-title">
+            Você não precisa estar 100% para merecer amor.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Amor não é recompensa por bom comportamento. Não é só pra quem tá plena, bonita ou com tudo sob controle. Amor real acolhe até nos dias mais caóticos. Você merece ser amada — mesmo quando não tá bem.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 10 (Página 3) -->
+        <article class="blog-page-card" id="post-10" data-page="3">
+				<a href="blog/e-por-isso-que-o-medo-nao-importa.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-10.jpg" alt="É por isso que o medo não importa.">
+          </div>
+          <h2 class="blog-page-card-title">
+            É por isso que o medo não importa.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Se a gente estiver sempre travada pelo medo, nunca vamos viver nossos sonhos ou ser autênticas. O medo de julgamento está diretamente ligado à insegurança, à autocobrança e ao que a gente acha que as pessoas vão pensar sobre nós, mesmo
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>3 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 11 (Página 3) -->
+        <article class="blog-page-card" id="post-11" data-page="3">
+				<a href="blog/e-se-o-prazer-deixasse-de-ser-tabu-e-virasse-territorio-livre.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-11.jpg" alt="E se o prazer deixasse de ser tabu e virasse território livre?">
+          </div>
+          <h2 class="blog-page-card-title">
+            E se o prazer deixasse de ser tabu e virasse território livre?
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Você já se sentiu com vergonha do próprio corpo? Ou com dificuldade de entender seus próprios desejos? Você pode sim viver sua sexualidade sem culpa — e com verdade. Sua sexualidade é sua. E você tem direito de viver isso com respeito, afeto e autonomia. Mais um tabu para ser quebrado.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 12 (Página 3) -->
+        <article class="blog-page-card" id="post-12" data-page="3">
+				<a href="blog/sua-sexualidade-nao-e-bagunca-e-potencia.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-12.jpg" alt="Sua sexualidade não é bagunça. É potência.">
+          </div>
+          <h2 class="blog-page-card-title">
+            Sua sexualidade não é bagunça. É potência.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Desde cedo, muitas mulheres aprendem que sexualidade é algo “pro outro”. Que sentir desejo é perigoso. Que ser livre é “ser demais”. A Psicologia Feminista nos ajuda a entender que o controle sobre a sexualidade feminina é uma ferramenta de opressão. E ninguém além de você deve ter as rédeas dela.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 13 (Página 4) -->
+        <article class="blog-page-card" id="post-13" data-page="4">
+				<a href="blog/autoconfianca-quem-disse-que-voce-precisa-ter-certeza-pra-confiar-em-si.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-13.jpg" alt="Quem disse que você precisa ter certeza pra confiar em si? Autoconfiança é tudo.">
+          </div>
+          <h2 class="blog-page-card-title">
+            Quem disse que você precisa ter certeza pra confiar em si? Autoconfiança é tudo.
+          </h2>
+          <p class="blog-page-card-excerpt">
+            A autoconfiança não nasce do controle — ela brota da presença. Autoconfiança não é ausência de dúvidas, é saber que, mesmo com elas, você merece ocupar seu espaço.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 14 (Página 4) -->
+        <article class="blog-page-card" id="post-14" data-page="4">
+				<a href="blog/e-se-autoestima-nao-for-dom-mas-construcao.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-14.jpg" alt="E se autoestima não for dom, mas construção?">
+          </div>
+          <h2 class="blog-page-card-title">
+            E se autoestima não for dom, mas construção?
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Se amar é ato político. E cuidar de si é parte da revolução. A verdade é que a autoestima não aparece de repente só porque você leu uma frase legal no Instagram Se amar é um processo. E nem sempre é fácil.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 15 (Página 4) -->
+        <article class="blog-page-card" id="post-15" data-page="4">
+				<a href="blog/ate-quando-voce-vai-se-sacrificar-em-nome-do-amor.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-15.jpg" alt="Até quando você vai se sacrificar em nome do amor?">
+          </div>
+          <h2 class="blog-page-card-title">
+            Até quando você vai se sacrificar em nome do amor?
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Antes de se entregar, se pergunte: esse relacionamento te permite existir inteira? A gente cresce ouvindo que amar é sofrer calada, e não aprende o que é amor. Mas amor de verdade é escolha intencional, presença real e liberdade, com cuidado, respeito, responsabilidade, afeto e confiança.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>3 min ler</span>
+          </div>
+        </article>
+
+        <!-- Post 16 (Página 4) -->
+        <article class="blog-page-card" id="post-16" data-page="4">
+				<a href="blog/se-amar-esta-te-custando-a-paz-sera-que-e-amor-mesmo.html" class="link-post">
+          <div class="blog-page-img-wrapper">
+            <img src="imagens/blog-16.jpg" alt="Se amar está te custando a paz, será que é amor mesmo?">
+          </div>
+          <h2 class="blog-page-card-title">
+            Se amar está te custando a paz, será que é amor mesmo?
+          </h2>
+          <p class="blog-page-card-excerpt">
+            Amar, de verdade, exige escolha, presença e coragem pra ser honesta consigo e com o outro. Numa cultura que ainda romantiza o abuso e a ausência, ninguém ensina isso pra gente. Porque o amor de verdade não exige que você se diminua pra caber.
+          </p>
+		  </a>
+          <div class="blog-page-card-meta">
+            <span>Sabrina Tibursky</span>
+            <span>2 min ler</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Paginação (< 1 2 3 4 >) -->
+      <div class="blog-page-pagination">
+        <button class="blog-page-arrow" id="prev-page-btn" aria-label="Página anterior">&lt;</button>
+        <a href="?pagina=1" class="blog-page-num active" data-page="1">1</a>
+        <a href="?pagina=2" class="blog-page-num" data-page="2">2</a>
+        <a href="?pagina=3" class="blog-page-num" data-page="3">3</a>
+        <a href="?pagina=4" class="blog-page-num" data-page="4">4</a>
+        <button class="blog-page-arrow" id="next-page-btn" aria-label="Próxima página">&gt;</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= RODAPÉ (COM AVISO ÉTICO CONFORME IMAGEM DO BLOG) ================= -->
+  <footer class="footer-bar blog-footer">
+    <div class="container">
+      
+      <!-- Aviso de Atendimento de Emergência / CVV -->
+      <div class="footer-warning">
+        <p>
+          Atenção: Este site não oferece atendimento imediato à pessoas em crise sob risco de vida.<br>
+          Em caso de crise, ligue para o CVV - Disque 188
+        </p>
+        <p>
+          Em caso de emergência, procure o hospital mais próximo. Havendo risco à vida, ligue imediatamente para o<br>
+          SAMU (tel 192)
+        </p>
+      </div>
+
+      <hr class="footer-divider">
+
+      <!-- Linha de Redes Sociais (Esquerda) e E-mail (Direita) -->
+      <div class="blog-footer-middle">
+        <div class="footer-socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+            </svg>
+          </a>
+        </div>
+
+        <a href="mailto:psi.sabrinatibursky@gmail.com" class="footer-email">psi.sabrinatibursky@gmail.com</a>
+      </div>
+
+      <!-- Linha Inferior: Créditos na esquerda e Botão Fale Comigo centralizado -->
+      <div class="blog-footer-bottom">
+        <div class="footer-info-left">
+          <p class="footer-name">Sabrina Tibursky Alves Ventura | Psicóloga Clínica</p>
+          <p class="footer-crp">CRP 06/206234</p>
+          <p class="footer-copy">© 2026. All rights reserved.</p>
+        </div>
+
+        <div class="blog-footer-cta">
+          <a href="https://wa.me/5511982233209?text=Oi%C3%AA,%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." target="_blank" rel="noopener" class="btn-footer">
+            Fale comigo
+          </a>
+        </div>
+
+        <div class="blog-footer-spacer"></div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= BOTÃO FLUTUANTE DO WHATSAPP ================= -->
+  <a href="https://wa.me/5511982233209?text=Oi%C3%AA,%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Conversar pelo WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="#ffffff">
+      <path d="M16.004 3.2c-7.072 0-12.8 5.728-12.8 12.8 0 2.256.592 4.464 1.712 6.416L3.2 28.8l6.56-1.712c1.888 1.024 4.032 1.568 6.244 1.568 7.072 0 12.8-5.728 12.8-12.8s-5.728-12.656-12.8-12.656zm7.472 18.144c-.32.896-1.856 1.712-2.56 1.824-.656.112-1.488.16-2.4-.144-.56-.176-1.28-.416-2.192-.816-3.856-1.664-6.368-5.552-6.56-5.808-.192-.256-1.568-2.08-1.568-3.968 0-1.888.992-2.816 1.344-3.2.352-.384.768-.48 1.024-.48.256 0 .512.016.736.032.24.016.56-.096.88.672.32.768 1.088 2.656 1.184 2.848.096.192.16.416.032.672-.128.256-.192.416-.384.64-.192.224-.4.496-.576.672-.192.192-.384.4-.16.784.224.384.992 1.632 2.128 2.64 1.456 1.296 2.688 1.696 3.072 1.888.384.192.608.16.832-.096.224-.256.96-1.12 1.216-1.504.256-.384.512-.32.864-.192.352.128 2.24 1.056 2.624 1.248.384.192.64.288.736.448.096.16.096.928-.224 1.824z"/>
+    </svg>
+  </a>
+
+  <!-- ================= SCRIPTS (MENU, FADE-IN E PAGINAÇÃO DE 4 EM 4) ================= -->
+  <script>
+    // 1. Menu Hambúrguer no Celular
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburgerBtn.addEventListener('click', () => {
+      hamburgerBtn.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // 2. Efeito Fade-in de cima para baixo ao rolar a página
+    const elementosParaAnimar = document.querySelectorAll(`
+      .blog-title-white-box,
+      .blog-page-card,
+      .blog-page-pagination
+    `);
+
+    elementosParaAnimar.forEach(el => el.classList.add('reveal-item'));
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      let delay = 0;
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, delay);
+          delay += 110;
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    // 3. Paginação Automática (Exibe apenas 4 artigos por página)
+    const postsPorPagina = 4;
+    const todosOsPosts = Array.from(document.querySelectorAll('#blog-posts-grid .blog-page-card'));
+    const botoesPagina = document.querySelectorAll('.blog-page-num');
+    const btnAnterior = document.getElementById('prev-page-btn');
+    const btnProximo = document.getElementById('next-page-btn');
+    const totalPaginas = Math.max(1, Math.ceil(todosOsPosts.length / postsPorPagina));
+
+    const params = new URLSearchParams(window.location.search);
+    let paginaAtual = parseInt(params.get('pagina')) || 1;
+
+    // Se vier de um link específico (ex: blog.html#post-6), abre direto na página daquele post
+    if (window.location.hash) {
+      const postAlvoIndex = todosOsPosts.findIndex(post => `#${post.id}` === window.location.hash);
+      if (postAlvoIndex !== -1) {
+        paginaAtual = Math.floor(postAlvoIndex / postsPorPagina) + 1;
+      }
+    }
+
+    function mostrarPagina(pagina, rolarParaTopo = false) {
+      if (pagina < 1) pagina = 1;
+      if (pagina > totalPaginas) pagina = totalPaginas;
+      paginaAtual = pagina;
+
+      const inicio = (paginaAtual - 1) * postsPorPagina;
+      const fim = inicio + postsPorPagina;
+
+      todosOsPosts.forEach((post, index) => {
+        if (index >= inicio && index < fim) {
+          post.style.display = 'flex';
+          post.classList.remove('revealed');
+          observer.observe(post);
+        } else {
+          post.style.display = 'none';
+          post.classList.remove('revealed');
+          observer.unobserve(post);
+        }
+      });
+
+      botoesPagina.forEach(btn => {
+        const num = parseInt(btn.dataset.page);
+        btn.classList.toggle('active', num === paginaAtual);
+      });
+
+      const novaUrl = `${window.location.pathname}?pagina=${paginaAtual}`;
+      window.history.replaceState({}, '', novaUrl);
+
+      if (rolarParaTopo) {
+        document.querySelector('.blog-hero-banner').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    botoesPagina.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const paginaEscolhida = parseInt(btn.dataset.page);
+        mostrarPagina(paginaEscolhida, true);
+      });
+    });
+
+    btnAnterior.addEventListener('click', () => {
+      if (paginaAtual > 1) {
+        mostrarPagina(paginaAtual - 1, true);
+      }
+    });
+
+    btnProximo.addEventListener('click', () => {
+      if (paginaAtual < totalPaginas) {
+        mostrarPagina(paginaAtual + 1, true);
+      }
+    });
+
+    // Observa o título e a barra de paginação e carrega a página inicial do blog
+    observer.observe(document.querySelector('.blog-title-white-box'));
+    observer.observe(document.querySelector('.blog-page-pagination'));
+    mostrarPagina(paginaAtual, false);
+  </script>
+
+</body>
+</html>
