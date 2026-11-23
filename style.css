@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+
+@font-face {
+  font-family: 'fonte_logo';
+  src: url('fontes/fonte_logo.otf') format('opentype');  
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --purple-main: #9b1b66;       /* Roxo/magenta principal das faixas e topo */
   --purple-dark: #2a0419;       /* Sombra escura dos cards */
@@ -195,22 +204,22 @@ a {
 .hero-title-box {
   background-color: var(--purple-main);
   color: var(--white);
-  padding: 27px 30px 21px;
+  padding: 0px 30px 21px;
   position: relative;
   box-shadow: -12px -12px 0px var(--salmon-accent);
   margin-bottom: 33px;
 }
 
 .script-name {
-  font-family: 'Great Vibes', cursive;
-  font-size: 4.65rem;
+  font-family: 'fonte_logo', cursive;
+  font-size: 10rem;
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 0.8;
   margin-bottom: 9px;
 }
 
 .script-name.psico-hero-name {
-  font-size: 3.52rem;
+  font-size: 8rem;
 }
 
 .crp-text {
@@ -1671,11 +1680,11 @@ a {
   }
 
   .script-name {
-    font-size: 3.2rem;
+    font-size: 7rem;
   }
 
   .script-name.psico-hero-name {
-    font-size: 2.3rem;
+    font-size: 5rem;
   }
 
   /* ================= SEÇÃO "PRAZER," NO CELULAR ================= */
