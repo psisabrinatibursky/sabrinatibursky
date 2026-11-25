@@ -1,0 +1,837 @@
+/* =========================================================================
+   LANDING-PAGE.CSS
+   Estilos complementares exclusivos para a Landing Page de Sabrina Tibursky.
+   Preserva 100% o style.css original sem modificá-lo.
+   ========================================================================= */
+
+/* ================= 1. FAIXA FIXA DE OFERTA NO TOPO ================= */
+/* Inicia oculta para evitar flash visual caso a oferta já esteja esgotada */
+.offer-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(90deg, var(--purple-dark) 0%, #6d1046 50%, var(--purple-dark) 100%);
+  color: var(--white);
+  z-index: 1001;
+  display: none;
+  align-items: center;
+  border-bottom: 1.5px solid var(--salmon-accent);
+  box-shadow: 0 2px 10px rgba(42, 4, 25, 0.28);
+}
+
+.offer-top-bar.is-visible {
+  display: flex;
+}
+
+.offer-top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 0.94rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.offer-pulse-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--salmon-accent);
+  box-shadow: 0 0 0 0 rgba(255, 95, 77, 0.75);
+  animation: offerPulse 1.8s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes offerPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 95, 77, 0.75);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(255, 95, 77, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 95, 77, 0);
+  }
+}
+
+.offer-countdown-text {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.offer-top-cta {
+  background-color: var(--salmon-accent);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.offer-top-cta:hover {
+  background-color: var(--white);
+  color: var(--purple-main);
+}
+
+/* Ajuste automático da Navbar e do Body apenas quando a faixa de oferta está visível */
+body.has-offer-bar {
+  padding-top: 140px; /* 96px da navbar + 44px da faixa de oferta */
+}
+
+body.has-offer-bar .navbar {
+  top: 44px;
+}
+
+/* ================= 2. HERO COMPACTO + SELO + VÍDEO VERTICAL ================= */
+.lp-hero-section {
+  padding: 24px 0 56px;
+}
+
+.lp-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 920px;
+}
+
+.lp-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.lp-eyebrow-badge {
+  display: inline-block;
+  background-color: rgba(155, 27, 102, 0.1);
+  color: var(--purple-main);
+  border: 1px solid rgba(155, 27, 102, 0.28);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.85px;
+  padding: 5px 18px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.lp-hero-headline {
+  font-size: 1.76rem;
+  font-weight: 700;
+  color: #4f1d34;
+  line-height: 1.24;
+  max-width: 780px;
+  margin-bottom: 8px;
+}
+
+.lp-hero-slogan {
+  font-size: 1.02rem;
+  color: #5a3a47;
+  max-width: 700px;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+/* Container Vertical 9:16 dimensionado para entrar direto na primeira tela */
+.lp-video-wrapper {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto 24px;
+}
+
+.lp-video-frame.lp-video-vertical {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 62vh;
+  background-color: var(--purple-dark);
+  border: 3px solid var(--purple-main);
+  box-shadow: -10px 10px 0px var(--salmon-accent);
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* Integração do VSL Player dentro da moldura vertical (9:16) */
+.lp-video-frame .vsl-player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  border-radius: 0;
+  margin: 0;
+}
+
+.lp-video-frame iframe,
+.lp-video-frame video,
+.lp-video-frame .vsl-player .vsl-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+  display: block;
+}
+
+.lp-hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.lp-btn-cta {
+  font-size: 1.12rem;
+  font-weight: 600;
+  padding: 14px 38px;
+  max-width: 460px;
+  box-shadow: 0 8px 22px rgba(155, 27, 102, 0.25);
+}
+
+.lp-btn-cta:hover {
+  transform: translateY(-2px);
+}
+
+.lp-cta-microcopy {
+  font-size: 0.88rem;
+  color: #633d4e;
+}
+
+/* ================= 3. SEÇÃO DE IDENTIFICAÇÃO / DORES ================= */
+.lp-pain-section {
+  background-color: var(--pink-bg);
+  padding: 76px 0 88px;
+}
+
+.lp-section-title {
+  margin-bottom: 14px;
+}
+
+.lp-section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4f2c3c;
+  max-width: 760px;
+  margin: 0 auto 48px;
+  line-height: 1.52;
+}
+
+.lp-pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1140px;
+  margin: 0 auto 42px;
+}
+
+.lp-pain-card {
+  background-color: var(--white);
+  padding: 30px 32px;
+  border-left: 5px solid var(--purple-main);
+  box-shadow: 8px 8px 0px rgba(155, 27, 102, 0.18);
+}
+
+.lp-pain-number {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--salmon-accent);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.lp-pain-card h3 {
+  font-size: 1.24rem;
+  font-weight: 600;
+  color: var(--purple-main);
+  margin-bottom: 10px;
+}
+
+.lp-pain-card p {
+  font-size: 1.02rem;
+  color: var(--text-dark);
+  line-height: 1.52;
+}
+
+.lp-pain-callout {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: var(--purple-main);
+  color: var(--white);
+  padding: 26px 34px;
+  text-align: center;
+  box-shadow: -10px 10px 0px var(--salmon-accent);
+}
+
+.lp-pain-callout p {
+  font-size: 1.08rem;
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+.lp-pain-callout strong {
+  font-weight: 600;
+}
+
+/* ================= 4. SEÇÃO DO MÉTODO / PASSO A PASSO ================= */
+.lp-method-section {
+  background-color: var(--white);
+  padding: 78px 0 88px;
+}
+
+.lp-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.lp-step-card {
+  background-color: var(--purple-main);
+  color: var(--white);
+  padding: 30px 32px;
+  box-shadow: 10px 10px 0px var(--purple-dark);
+}
+
+.lp-step-header {
+  margin-bottom: 12px;
+}
+
+.lp-step-tag {
+  display: inline-block;
+  background-color: var(--salmon-accent);
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 3px 13px;
+  border-radius: 50px;
+  margin-bottom: 8px;
+}
+
+.lp-step-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.lp-step-card p {
+  font-size: 1.02rem;
+  font-weight: 300;
+  line-height: 1.52;
+  opacity: 0.96;
+}
+
+/* ================= 5. PARA QUEM É & O QUE ESTÁ INCLUSO ================= */
+.lp-audience-section {
+  background-color: var(--purple-main);
+  color: var(--white);
+  padding: 76px 0 88px;
+}
+
+.lp-audience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.lp-audience-box {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  padding: 34px 36px;
+}
+
+.lp-included-box {
+  background-color: var(--white);
+  color: var(--text-dark);
+  border: none;
+  box-shadow: -10px 10px 0px var(--salmon-accent);
+}
+
+.lp-audience-box h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.lp-included-box h3 {
+  color: var(--purple-main);
+}
+
+.lp-check-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.lp-check-list li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.lp-check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--salmon-accent);
+  font-weight: 700;
+}
+
+/* ================= 5.1 BOTÃO DA SEÇÃO SOBRE SABRINA ================= */
+.lp-about-btn {
+  background-color: rgba(155, 27, 102, 0.045);
+  font-size: 1.02rem;
+  padding: 10px 34px;
+}
+
+.lp-about-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(155, 27, 102, 0.16);
+}
+
+/* ================= 6. DEPOIMENTOS EM ESTEIRA CONTÍNUA (MARQUEE) ================= */
+.lp-testimonials-section {
+  padding: 72px 0 46px;
+  overflow: hidden;
+}
+
+/* Edite --marquee-speed para deixar a esteira mais rápida (ex: 28s) ou mais lenta (ex: 55s) */
+.lp-marquee-viewport {
+  --marquee-speed: 40s;
+  --marquee-gap: 24px;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 28px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+}
+
+.lp-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: var(--marquee-gap);
+  width: max-content;
+  will-change: transform;
+  animation: testimonialsMarquee var(--marquee-speed) linear infinite;
+}
+
+.lp-marquee-viewport:hover .lp-marquee-track,
+.lp-marquee-viewport:focus-within .lp-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes testimonialsMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-50% - (var(--marquee-gap) / 2)), 0, 0);
+  }
+}
+
+.lp-marquee-item {
+  flex: 0 0 auto;
+  width: 310px;
+}
+
+.lp-marquee-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(42, 4, 25, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.lp-marquee-item:hover .lp-marquee-img {
+  transform: scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-marquee-viewport {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .lp-marquee-track {
+    animation: none;
+    padding: 0 24px;
+  }
+}
+
+/* ================= 7. BLOCO DE OFERTA / CONVERSÃO FINAL ================= */
+.lp-offer-section {
+  padding: 80px 0 92px;
+}
+
+.lp-offer-card {
+  max-width: 820px;
+  margin: 0 auto;
+  background-color: var(--purple-main);
+  color: var(--white);
+  padding: 46px 48px;
+  text-align: center;
+  box-shadow: -14px 14px 0px var(--salmon-accent);
+}
+
+.lp-offer-badge {
+  display: inline-block;
+  background-color: var(--salmon-accent);
+  color: var(--white);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.lp-offer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.lp-offer-description {
+  font-size: 1.08rem;
+  font-weight: 300;
+  line-height: 1.55;
+  max-width: 650px;
+  margin: 0 auto 28px;
+  opacity: 0.96;
+}
+
+.lp-offer-features {
+  list-style: none;
+  max-width: 580px;
+  margin: 0 auto 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 1.02rem;
+  font-weight: 400;
+}
+
+.lp-offer-features li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.lp-offer-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--salmon-accent);
+  font-weight: 700;
+}
+
+.lp-price-box {
+  background-color: rgba(42, 4, 25, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px 24px;
+  max-width: 520px;
+  margin: 0 auto 30px;
+}
+
+.lp-price-old {
+  display: block;
+  font-size: 0.96rem;
+  text-decoration: line-through;
+  opacity: 0.78;
+  margin-bottom: 4px;
+}
+
+.lp-price-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.lp-price-label {
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
+
+.lp-price-value {
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: var(--salmon-accent);
+  line-height: 1.15;
+}
+
+.lp-price-note {
+  font-size: 0.88rem;
+  opacity: 0.88;
+}
+
+.lp-offer-btn {
+  background-color: var(--salmon-accent);
+  border-color: var(--salmon-accent);
+  color: var(--white);
+  font-size: 1.12rem;
+  font-weight: 600;
+  padding: 14px 38px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.lp-offer-btn:hover {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--purple-main);
+}
+
+.lp-offer-footnote {
+  margin-top: 14px;
+  font-size: 0.88rem;
+  opacity: 0.88;
+}
+
+/* ================= 8. FAQ INTERATIVO (ACORDEÃO) ================= */
+.lp-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.lp-faq-item {
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.lp-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 600;
+  padding: 20px 24px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.lp-faq-icon {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--salmon-accent);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.lp-faq-item.active .lp-faq-icon {
+  transform: rotate(45deg);
+}
+
+.lp-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 24px;
+}
+
+.lp-faq-item.active .lp-faq-answer {
+  max-height: 360px;
+  padding: 0 24px 22px;
+}
+
+.lp-faq-answer p {
+  font-size: 0.99rem;
+  font-weight: 300;
+  line-height: 1.55;
+  opacity: 0.95;
+}
+
+/* ================= 9. RESPONSIVIDADE DA LANDING PAGE ================= */
+@media (max-width: 768px) {
+  .offer-top-bar {
+    height: 40px;
+  }
+
+  .offer-top-bar-inner {
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
+  .offer-top-cta {
+    display: none;
+  }
+
+  body.has-offer-bar {
+    padding-top: 114px; /* 74px navbar + 40px faixa de oferta */
+  }
+
+  body.has-offer-bar .navbar {
+    top: 40px;
+  }
+
+  body.has-offer-bar .nav-menu {
+    top: 114px;
+    height: calc(100vh - 114px);
+  }
+
+  /* Hero compacto no celular para o vídeo vertical aparecer logo de imediato */
+  .lp-hero-section {
+    padding: 16px 0 44px;
+  }
+
+  .lp-hero-container,
+  .lp-hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .lp-eyebrow-badge,
+  .lp-hero-headline,
+  .lp-hero-slogan,
+  .lp-video-wrapper,
+  .lp-hero-cta-group {
+    order: initial !important;
+  }
+
+  .lp-eyebrow-badge {
+    font-size: 0.7rem;
+    padding: 4px 13px;
+    margin-bottom: 8px;
+  }
+
+  .lp-hero-headline {
+    font-size: 1.22rem;
+    margin-bottom: 6px;
+  }
+
+  .lp-hero-slogan {
+    font-size: 0.86rem;
+    margin-bottom: 14px;
+  }
+
+  .lp-video-wrapper {
+    max-width: 280px;
+    margin-bottom: 18px;
+  }
+
+  .lp-video-frame.lp-video-vertical {
+    max-height: 56vh;
+    box-shadow: -7px 7px 0px var(--salmon-accent);
+  }
+
+  /* Respiro extra para os cards internos do VSL Player no celular (280px) */
+  .lp-video-frame .vsl-overlay {
+    padding: 16px;
+  }
+
+  .lp-video-frame .vsl-smart-card {
+    padding: 16px 18px;
+    gap: 8px;
+  }
+
+  .lp-video-frame .vsl-smart-pulse {
+    width: 50px;
+    height: 50px;
+  }
+
+  .lp-video-frame .vsl-smart-pulse svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .lp-video-frame .vsl-big-play {
+    width: 62px;
+    height: 62px;
+  }
+
+  .lp-video-frame .vsl-big-play svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .lp-video-frame .vsl-resume-content {
+    gap: 10px;
+  }
+
+  .lp-video-frame .vsl-resume-heading {
+    font-size: 15px;
+  }
+
+  .lp-video-frame .vsl-resume-primary {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .lp-btn-cta {
+    font-size: 0.98rem;
+    padding: 12px 22px;
+  }
+
+  .lp-pain-grid,
+  .lp-steps-grid,
+  .lp-audience-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .lp-pain-card,
+  .lp-step-card,
+  .lp-audience-box {
+    padding: 24px 22px;
+  }
+
+  .lp-marquee-viewport {
+    --marquee-speed: 32s;
+    --marquee-gap: 16px;
+  }
+
+  .lp-marquee-item {
+    width: 245px;
+  }
+
+  .lp-offer-card {
+    padding: 32px 22px;
+    box-shadow: -8px 8px 0px var(--salmon-accent);
+  }
+
+  .lp-offer-title {
+    font-size: 1.48rem;
+  }
+
+  .lp-price-value {
+    font-size: 1.9rem;
+  }
+
+  .lp-faq-question {
+    font-size: 1rem;
+    padding: 16px 18px;
+  }
+
+  .lp-faq-item.active .lp-faq-answer {
+    padding: 0 18px 18px;
+  }
+}
